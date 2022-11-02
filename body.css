@@ -1,0 +1,58 @@
+html,
+body {
+
+  margin-bottom: 100px;
+}
+label {
+  text-transform: uppercase;
+}
+.codes code {
+  color: white;
+}
+.codes .pink {
+  color: rgb(255, 0, 98);
+}
+.codes .yellow {
+  color: rgb(247, 228, 56);
+}
+.codes .blue {
+  color: rgb(0, 204, 255);
+}
+.codes .grey {
+  color: rgb(134, 134, 134);
+}
+.codes .green {
+  color: rgb(92, 255, 160);
+}
+img {
+  display: inline-block;
+  height: 130px;
+  margin: 10px;
+}
+#title {
+  display: flex;
+}
+.container {
+  margin-top: 35px;
+}
+.buttons {
+  margin-top: 10px;
+}
+.buttons button {
+  margin-right: 10px;
+}
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+  
+}
+.buttons-space button{
+width: 120px;
+margin-bottom:10px ;
+}
+.buttons-space{
+padding-top: 10%;
+  }

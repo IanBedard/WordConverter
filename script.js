@@ -26,6 +26,8 @@ output = output.replace(rgxUntilH1,"");
         }).join("");
         
         document.getElementById("messages").innerHTML = "<ul>" + messageHtml + "</ul>";
+
+        $("#html-data").val(output);
     }
     
     function readFileInputEventAsArrayBuffer(event, callback) {
