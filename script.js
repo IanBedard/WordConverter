@@ -13,23 +13,29 @@
     
 function displayResult(result) {
 let output = result.value;
+/*----------------------------------------------------------------*/
+rgxArray = [
+    /.+?(?=<h1>)/g,
+    /(?!(<\/[a-z0-9]+>))(<)/g,
+    /(\sid=".*")/g,
+    /<([a-z0-9]+)>(\n+|)<\/\1>/gm
+            ]
+
+rgxReplaceArray = [
+    "",
+    "\n<",
+    "",
+    ""
+                  ]
 
 
-rgxUntilH1 = /.+?(?=<h1>)/;
-rgxHtmlBrackets = /(?!(<\/[a-z0-9]+>))(<)/g
-rgxIdSelector = /(\sid=".*")/g
-rgxUselessTags = /<([a-z0-9]+)>(\n*|)<\/\1>/g
-//removes the everything before the h1
-output = output.replace(rgxUntilH1,"");
-//creates returns after each end of tags
-output = output.replaceAll(rgxHtmlBrackets,"\r\n<");  
-//removes useless IDs
-output = output.replaceAll(rgxIdSelector,"");  
-  //removes useless Tags
-  output = output.replaceAll(rgxUselessTags,""); 
+rgxArray.forEach((i,number)=>{
+output = output.replaceAll(i,rgxReplaceArray[number])
 
+});
 
-        document.getElementById("output").innerHTML = output;
+/*----------------------------------------------------------------*/
+document.getElementById("output").innerHTML = output;
         
         var messageHtml = result.messages.map(function(message) {
             return '<li class="' + message.type + '">' + escapeHtml(message.message) + "</li>";
