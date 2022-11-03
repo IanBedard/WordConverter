@@ -28,7 +28,7 @@ rgxReplaceArray = [
     "\n<",
     "",
     "",
-    "<table class='table table-bordered' style='table-layout: fixed;' >"
+    "<table class='table table-bordered' style='table-layout: fixed;'>"
   
                   ]
 
@@ -79,5 +79,6 @@ document.getElementById("output").innerHTML = output;
             .replace(/>/g, '&gt;');
     }
   
-    
+
 })();
+$('#copy-txt')[0].onclick = ()=>{ navigator.clipboard.writeText($('#html-data')[0].value)}
