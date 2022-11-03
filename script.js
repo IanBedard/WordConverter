@@ -18,19 +18,31 @@ rgxArray = [
     /.+?(?=<h1>)/g,
     /(?!(<\/[a-z0-9]+>))(<)/g,
     /(\sid=".*")/g,
-    /<([a-z0-9]+)>(\n+|)<\/\1>/gm
+    /<([a-z0-9]+)>(\n+|)<\/\1>/gm,
+    /<table(.*?)>/gm
+
             ]
 
 rgxReplaceArray = [
     "",
     "\n<",
     "",
-    ""
+    "",
+    "<table class='table table-bordered' style='table-layout: fixed;' >"
+  
                   ]
 
 
-rgxArray.forEach((i,number)=>{
-output = output.replaceAll(i,rgxReplaceArray[number])
+rgxArray.forEach((regex,i)=>{
+    if (i===3){
+        let e=0;
+        while (e < 6) {
+            output = output.replaceAll(regex,rgxReplaceArray[i])
+            e++;
+          }}
+
+output = output.replaceAll(regex,rgxReplaceArray[i])
+
 
 });
 
