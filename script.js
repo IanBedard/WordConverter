@@ -15,11 +15,12 @@ function displayResult(result) {
 let output = result.value;
 /*----------------------------------------------------------------*/
 rgxArray = [
-    /.+?(?=<h1>)/g,
-    /(?!(<\/[a-z0-9]+>))(<)/g,
-    /(\sid=".*")/g,
-    /<([a-z0-9]+)>(\n+|)<\/\1>/gm,
-    /<table(.*?)>/gm
+    /.+?(?=<h1>)/g,//remove all above the h1
+    /(?!(<\/[a-z0-9]+>))(<)/g,//adds a new line to every closing tag
+    /(\sid=".*")/g,//remove ids
+    /<([a-z0-9]+)>(\n+|)<\/\1>/gm,//gets all tag with nothing between themselves
+    /<table(.*?)>/gm,//gets the table tag
+    /(?<=<table(.*?)>\n*?)(<tr>)/gm,//gets the first tr tag after table
 
             ]
 
@@ -28,7 +29,9 @@ rgxReplaceArray = [
     "\n<",
     "",
     "",
-    "<table class='table table-bordered' style='table-layout: fixed;'>"
+    "<table class='table table-bordered' style='table-layout: fixed;'>",
+    "<tr class='active'>"
+    
   
                   ]
 
