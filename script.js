@@ -33,7 +33,10 @@ rgxArray = [
     /(?<=<table(.*?)>\n*?)(<tr>)/gm,//gets the first tr tag after table
     /<strong>(\s)?<\/strong>/g,
     /<p>(\s)?<\/p>/g,
-    /(<h2> )/g
+    /(<h2> )/g,
+    /(\W<\/h2>)/g,
+    /(>)\n+(?=\w)/gm,
+    /<em> <\/em>/g
             ]
 
 rgxReplaceArray = [
@@ -46,28 +49,69 @@ rgxReplaceArray = [
     "",
     "",
     "<h2>",
+    "</h2>",
+    ">",
+    "",
                   ]
 
-
+//applying the arrays above 
 rgxArray.forEach((regex,i)=>{
     if (i===3){
         let e=0;
         while (e < 6) {
-            console.log()
             output = output.replaceAll(regex,rgxReplaceArray[i])
             e++;
           }}
-
+          if (i===9){
+            let e=0;
+            while (e < 3) {
+             //console.log(regex)
+                output = output.replaceAll(regex,rgxReplaceArray[i])
+                e++;
+              }}
 output = output.replaceAll(regex,rgxReplaceArray[i])
 
 
 });
+//*** Applying IDS to H2s */
 
+//this will contain the id name after the first loop so it can apply the same id to On this Page
+let IDs=[]
+
+output.match(/<h2>.+<\/h2>/g).forEach(element => {
+    let elementID = element.match(/(?!<h2>)(\w+)(?=<\/h2>)/g);
+    let negLook = element.match(/(?!<h2>)(\w|\d|\s)+<\/h2>/g)
+    IDs.push(elementID)
+    //console.log("element ID: " + elementID)
+    //console.log("negative look: " + negLook)
+    output = output.replace(element, '<h2 id="'+elementID[0]+'">'+negLook[0])
+});
+
+if (IDs[0] == 'page') {
+  IDs.shift()
+const groupOnThisPage = /((id="page")(.|\n)+?<ul>)(.|\n)+?(<\/ul>+?)/gm;
+const liOnThisPage = /<li>(.)+<\/li>/g;
+const posLookBehind = /(?<=<li>)(.)+(?=<\/li>)/g
+const group = output.match(groupOnThisPage);
+const allLI = group[0].match(liOnThisPage);
+allLI.forEach((element,i) => {
+    let content = element.match(posLookBehind);
+    output = output.replace(element, '<li><a href="#'+IDs[i]+'">'+content+'</a></li>');
+    //<li><a href="---">content</a></li>
+});
+
+}
+else{console.log(false)}
+
+
+
+
+//*** applying accronyms */
 $.each(json_data, function(i, e){
     let tag = JSON.stringify(e.tag);
     let accronym = RegExp(e.accronym, "g");
-    console.log("acctronyms: " + RegExp(e.accronym, "g"))
-    console.log("tags: " + tag)
+    //console.log("acctronyms: " + RegExp(e.accronym, "g"))
+    //console.log("tags: " + tag)
     output = output.replaceAll(accronym,  tag)
   
   });
