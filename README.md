@@ -1,5 +1,5 @@
 
 # Word converter for PSPC procedures
 
-This application with mammoth.js and by adding regex functions.
+This application was made by using mammoth.js and by adding regex functions.
 
