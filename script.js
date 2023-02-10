@@ -76,11 +76,7 @@ $.each(json_data, function(i, e){
 /*----------------------------------------------------------------*/
 document.getElementById("output").innerHTML = output;
         
-        var messageHtml = result.messages.map(function(message) {
-            return '<li class="' + message.type + '">' + escapeHtml(message.message) + "</li>";
-        }).join("");
-        
-        document.getElementById("messages").innerHTML = "<ul>" + messageHtml + "</ul>";
+     
 
         $("#html-data").val(output);
     }

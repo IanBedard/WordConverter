@@ -12,10 +12,60 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
 
   </head>
+  <style>
+    div {
+      padding-top: 10px;
+      margin-bottom: 10px;
+    }
+    .html{
+      color: orange;
+      font-size: smaller;
+      border-left: orange solid 3px;
+    }
+    .docx {
+      color: blue;
+      font-size: smaller;
+      border-right: blue solid 3px;
+    }
+  
+  </style>
   <body>
 
     <div class="container">
-      <h1>Word Converter</h1>
+      <h1><span class="docx">docx</span><span class="html">html</span> Converter</h1>
+      <p>this application is designed to transform word procedures into html version of themselves.</p>
+      <div class="card bg-white mb-3"">
+        <div class="card-header">Latest Changes</div>
+        <div class="card-body">
+          <h5 class="card-title">1.4</h4>
+          <p class="card-text">Added ABBR tags and removed the message block + applied minor changes to formatting</p>
+          <hr>
+ 
+              <h2 class="accordion-header " id="headingOne">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                  Previous Updates
+                </button>
+              </h2>
+              <div id="collapseOne" class="accordion-collapse collapse " aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                  <h5 class="card-title">1.3</h4>
+                    <p class="card-text">added a button to copy all html in one click and added multiple modification for formatting.</p>
+                    <hr>
+                  <h5 class="card-title">1.2</h4>
+                    <p class="card-text">Now applies Wet-Boew formatting to tables and the first tr tag</p>
+                    <hr>
+                    <h5 class="card-title">1.1</h4>
+                      <p class="card-text">Added a removals of unecessary lines and empty tags</p>
+                      <hr>
+                      <h5 class="card-title">1.0</h4>
+                        <p class="card-text">Appliation published on GitHub with a dedicated page to host, uses default Mammoth.js </p>
+                        <hr>
+                </div>
+              </div>
+        
+ 
+        </div>
+      </div>
       <input  class="form-control"  id="document" type="file" />
       <div class="row">
         <div class="col-8">
@@ -23,10 +73,7 @@
           </div>
         </div>
         <div class="col-4">
-          <h3>Messages:</h3>
-          <div id="messages" class="">
-          </div>
-          <hr>
+ 
           <h3>Code:</h3>
          
           <textarea
@@ -36,8 +83,9 @@
             id="html-data"
             name="html-data"
             value="textOrigin"
-            placeholder="Json will appear here"
+            placeholder="HTML wil appear here"
           ></textarea> 
+        </br>
           <button type="button" id="copy-txt" class="btn btn-primary">
             Copy Textd
           </button>
