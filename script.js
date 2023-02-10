@@ -33,6 +33,7 @@ rgxArray = [
     /(?<=<table(.*?)>\n*?)(<tr>)/gm,//gets the first tr tag after table
     /<strong>(\s)?<\/strong>/g,
     /<p>(\s)?<\/p>/g,
+    /<br(\s)?\/>/g,
     /(<h2> )/g,
     /(\W<\/h2>)/g,
     /(>)\n+(?=\w)/gm,
@@ -46,6 +47,7 @@ rgxReplaceArray = [
     "",
     '<table class="table table-bordered" style="table-layout: fixed;">',
     '<tr class="active">',
+    "",
     "",
     "",
     "<h2>",
