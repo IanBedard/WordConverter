@@ -1,3 +1,13 @@
+
+$(document).ready(()=>{
+    $.getJSON("json/abbr.json", (data)=>{
+
+        json_data = data
+      
+    }).fail(()=>{
+        console.log("An error has occurred.");
+    });
+});
 (function() {
     document.getElementById("document")
         .addEventListener("change", handleFileSelect, false);
@@ -21,7 +31,9 @@ rgxArray = [
     /<([a-z0-9]+)>(\n+|)<\/\1>/gm,//gets all tag with nothing between themselves
     /<table(.*?)>/gm,//gets the table tag
     /(?<=<table(.*?)>\n*?)(<tr>)/gm,//gets the first tr tag after table
-
+    /<strong>(\s)?<\/strong>/g,
+    /<p>(\s)?<\/p>/g,
+    /(<h2> )/g
             ]
 
 rgxReplaceArray = [
@@ -29,10 +41,11 @@ rgxReplaceArray = [
     "\n<",
     "",
     "",
-    "<table class='table table-bordered' style='table-layout: fixed;'>",
-    "<tr class='active'>"
-    
-  
+    '<table class="table table-bordered" style="table-layout: fixed;">',
+    '<tr class="active">',
+    "",
+    "",
+    "<h2>",
                   ]
 
 
@@ -40,6 +53,7 @@ rgxArray.forEach((regex,i)=>{
     if (i===3){
         let e=0;
         while (e < 6) {
+            console.log()
             output = output.replaceAll(regex,rgxReplaceArray[i])
             e++;
           }}
@@ -48,6 +62,16 @@ output = output.replaceAll(regex,rgxReplaceArray[i])
 
 
 });
+
+$.each(json_data, function(i, e){
+    let tag = JSON.stringify(e.tag);
+    let accronym = RegExp(e.accronym, "g");
+    console.log("acctronyms: " + RegExp(e.accronym, "g"))
+    console.log("tags: " + tag)
+    output = output.replaceAll(accronym,  tag)
+  
+  });
+
 
 /*----------------------------------------------------------------*/
 document.getElementById("output").innerHTML = output;
@@ -84,4 +108,5 @@ document.getElementById("output").innerHTML = output;
   
 
 })();
-$('#copy-txt')[0].onclick = ()=>{ navigator.clipboard.writeText($('#html-data')[0].value)}
+$('#copy-txt')[0].onclick = ()=>{ navigator.clipboard.writeText($('#html-data')[0].value)
+alert("copied text to clipboard")}
