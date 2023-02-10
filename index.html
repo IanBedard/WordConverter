@@ -15,7 +15,7 @@
   <style>
     div {
       padding-top: 10px;
-      
+      margin-bottom: 30px;
     }
     .html{
       color: orange;
@@ -38,11 +38,11 @@
       <h1><span class="docx">docx</span><span class="html">html</span> Converter</h1>
       <div class="alert alert-dismissible alert-warning">
         <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
-        <p class="mb-0">This app will not work if the documents contains images.</p>
+        <p class="mb-0">This app will not work if the document contains images.</p>
       </div>
       <div class="alert alert-dismissible alert-info">
         <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
-        <p class="mb-0">Every new Update will of this app will require a hard refresh from the browser as the new script.js ned to be loaded. <span><b>CTRL</b> + <b>F5</b></span></p>
+        <p class="mb-0">Every new updates will require a hard refresh from the browser as the new script.js needs to be loaded. <span><b>CTRL</b> + <b>F5</b></span></p>
       </div>
       <p>this application is designed to transform word procedures into html version of themselves.</p>
       <div class="card bg-white mb-3"">
@@ -74,7 +74,7 @@
                       <hr>
                       <h5 class="card-title">1.0</h4>
                         <p class="card-text">Appliation published on GitHub with a dedicated page to host, uses default Mammoth.js </p>
-                        <hr>
+                        
                 </div>
               </div>
         
@@ -83,29 +83,32 @@
       </div>
       <input  class="form-control"  id="document" type="file" />
       <div class="row">
-        <div class="col-8">
-          <div id="output" class="well">
-          </div>
-        </div>
-        <div class="col-4">
+       
+        <div class="col-12">
  
-          <h3>Code:</h3>
+          <h2>HTML code:</h2>
          
-          <textarea
+          <code><textarea
           rows="20"
             class="form-control"
             type="text"
             id="html-data"
             name="html-data"
             value="textOrigin"
-            placeholder="HTML wil appear here"
-          ></textarea> 
+            placeholder="HTML will appear here"
+          ></textarea> </code>
    
           <button type="button" id="copy-txt" class="btn btn-success">
             Copy All
           </button>
         </div>
-  
+    
+   <div class="col-12">
+    <h2>Preview : </h2>
+    <hr>
+          <div id="output" class="well">
+          </div>
+        </div>
     </div>
     
     <script src="mammoth.browser.js"></script>
