@@ -1,110 +1,110 @@
 [
   {
     "accronym": "(?<!(\\w))CA(?!(\\w))",
-    "tag": "<abbr title='compensation advisor'>CA</abbr>"
+    "tag": "<abbr title=\"compensation advisor\">CA</abbr>"
   },
   {
     "accronym": "(?<!(\\w))EI(?!(\\w))",
-    "tag": "<abbr title='employment insurance'>EI</abbr>"
+    "tag": "<abbr title=\"employment insurance\">EI</abbr>"
   },
   {
     "accronym": "(?<!(\\w))QPIP(?!(\\w))",
-    "tag": "<abbr title='Qu&eacute;bec Parental Insurance Plan'>QPIP</abbr>"
+    "tag": "<abbr title=\"Qu&eacute;bec Parental Insurance Plan\">QPIP</abbr>"
   },
   {
     "accronym": "(?<!(\\w))ABBR(?!(\\w))",
-    "tag": "<abbr title='Annual Benefit Base Rate'>ABBR</abbr>"
+    "tag": "<abbr title=\"Annual Benefit Base Rate\">ABBR</abbr>"
   },
   {
     "accronym": "(?<!(\\w))SDB(?!(\\w))",
-    "tag": "<abbr title='Supplementary Death Benefit'>SDB</abbr>"
+    "tag": "<abbr title=\"Supplementary Death Benefit\">SDB</abbr>"
   },
   {
     "accronym": "(?<!(\\w))SAM(?!(\\w))",
-    "tag": "<abbr title='Superannuation Administration Manual'>SAM</abbr>"
+    "tag": "<abbr title=\"Superannuation Administration Manual\">SAM</abbr>"
   },
   {
     "accronym": "(?<!(\\w))PSHCP(?!(\\w))",
-    "tag": "<abbr title='Public Service Health Care Plan'>PSHCP</abbr>"
+    "tag": "<abbr title=\"Public Service Health Care Plan\">PSHCP</abbr>"
   },
   {
     "accronym": "(?<!(\\w))PP\\+(?!(\\w))",
-    "tag": "<abbr title='Pay Period Plus'>PP+</abbr>"
+    "tag": "<abbr title=\"Pay Period Plus\">PP+</abbr>"
   },
   {
     "accronym": "(?<!(\\w))CPP(?!(\\w))",
-    "tag": "<abbr title='Canada Pension Plan'>CPP</abbr>"
+    "tag": "<abbr title=\"Canada Pension Plan\">CPP</abbr>"
   },
   {
     "accronym": "(?<!(\\w))QPP(?!(\\w))",
-    "tag": "<abbr title='Qu&eacute;bec Pension Plan'>QPP</abbr>"
+    "tag": "<abbr title=\"Qu&eacute;bec Pension Plan\">QPP</abbr>"
   },
   {
     "accronym": "(?<!(\\w))LTD(?!(\\w))",
-    "tag": "<abbr title='Long-term disability'>PSMIP</abbr>"
+    "tag": "<abbr title=\"Long-term disability\">PSMIP</abbr>"
   },
   {
     "accronym": "(?<!(\\w))PSMIP(?!(\\w))",
-    "tag": "<abbr title='Public Service Management Insurance Plan'>PSMIP</abbr>"
+    "tag": "<abbr title=\"Public Service Management Insurance Plan\">PSMIP</abbr>"
   },
   {
     "accronym": "(?<!(\\w))DCP(?!(\\w))",
-    "tag": "<abbr title='Dental Care Plan'>DCP</abbr>"
+    "tag": "<abbr title=\"Dental Care Plan\">DCP</abbr>"
   },
   {
     "accronym": "(?<!(\\w))DI(?!(\\w))",
-    "tag": "<abbr title='Disability Insurance'>DI</abbr>"
+    "tag": "<abbr title=\"Disability Insurance\">DI</abbr>"
   },
   {
     "accronym": "(?<!(\\w))PSAC(?!(\\w))",
-    "tag": "<abbr title='Public Service Aliance of Canada'>PSAC</abbr>"
+    "tag": "<abbr title=\"Public Service Aliance of Canada\">PSAC</abbr>"
   },
   {
     "accronym": "(?<!(\\w))LWOP(?!(\\w))",
-    "tag": "<abbr title='Leave without pay'>LWOP</abbr>"
+    "tag": "<abbr title=\"Leave without pay\">LWOP</abbr>"
   },
   {
     "accronym": "(?<!(\\w))LIA(?!(\\w))",
-    "tag": "<abbr title='Leave with income averaging'>LIA</abbr>"
+    "tag": "<abbr title=\"Leave with income averaging\">LIA</abbr>"
   },
   {
     "accronym": "(?<!(\\w))BB(?!(\\w))",
-    "tag": "<abbr title='Bilingual bonus'>BB</abbr>"
+    "tag": "<abbr title=\"Bilingual bonus\">BB</abbr>"
   },
   {
     "accronym": "(?<!(\\w))HR(?!(\\w))",
-    "tag": "<abbr title='Human Resources'>HR</abbr>"
+    "tag": "<abbr title=\"Human Resources\">HR</abbr>"
   },
   {
     "accronym": "(?<!(\\w))PRI(?!(\\w))",
-    "tag": "<abbr title='Personal Record Identifier'>PRI</abbr>"
+    "tag": "<abbr title=\"Personal Record Identifier\">PRI</abbr>"
   },
   {
     "accronym": "(?<!(\\w))JSM(?!(\\w))",
-    "tag": "<abbr title='Job Stack Mapping'>JSM</abbr>"
+    "tag": "<abbr title=\"Job Stack Mapping\">JSM</abbr>"
   },
   {
     "accronym": "(?<!(\\w))HRMS(?!(\\w))",
-    "tag": "<abbr title='Human Resource Management System'>HRMS</abbr>"
+    "tag": "<abbr title=\"Human Resource Management System\">HRMS</abbr>"
   },
   {
     "accronym": "(?<!(\\w))RFL(?!(\\w))",
-    "tag": "<abbr title='Return From Leave'>RFL</abbr>"
+    "tag": "<abbr title=\"Return From Leave\">RFL</abbr>"
   },
   {
     "accronym": "(?<!(\\w))UEP(?!(\\w))",
-    "tag": "<abbr title='Unpaid entitlement pensionable earning code'>UEP</abbr>"
+    "tag": "<abbr title=\"Unpaid entitlement pensionable earning code\">UEP</abbr>"
   },
   {
     "accronym": "(?<!(\\w))YEPO(?!(\\w))",
-    "tag": "<abbr title='year-end processing current year'>YEPO</abbr>"
+    "tag": "<abbr title=\"year-end processing current year\">YEPO</abbr>"
   },
   {
     "accronym": "(?<!(\\w))CNV(?!(\\w))",
-    "tag": "<abbr title='conversion'>CNV</abbr>"
+    "tag": "<abbr title=\"conversion\">CNV</abbr>"
   },
   {
     "accronym": "(?<!(\\w))PSSA(?!(\\w))",
-    "tag": "<abbr title='Public Service Superannuation Act'>PSSA</abbr>"
+    "tag": "<abbr title=\"Public Service Superannuation Act\">PSSA</abbr>"
   }
 ]
