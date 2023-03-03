@@ -106,5 +106,37 @@
   {
     "accronym": "(?<!(\\w))PSSA(?!(\\w))",
     "tag": "<abbr title=\"Public Service Superannuation Act\">PSSA</abbr>"
+  },
+  {
+    "accronym": "(?<!(\\w))BUD(?!(\\w))",
+    "tag": "<abbr title=\"Bargaining Unit Designator\">BUD</abbr>"
+  },
+  {
+    "accronym": "(?<!(\\w))BUD(?!(\\w))",
+    "tag": "<abbr title=\"Bargaining Unit Designator\">BUD</abbr>"
+  },
+  {
+    "accronym": "(?<!(\\w))CR(?!(\\w))",
+    "tag": "<abbr title=\"Conseiller en rémunération\">CR</abbr>"
+  },
+  {
+    "accronym": "(?<!(\\w))IUN(?!(\\w))",
+    "tag": "<abbr title=\"indicateur d'unité de négociation\">IUN</abbr>"
+  },
+  {
+    "accronym": "(?<!(\\w))IFP(?!(\\w))",
+    "tag": "<abbr title=\"indemnité de facteur pénologique\">IFP</abbr>"
+  },
+  {
+    "accronym": "(?<!(\\w))IRC(?!(\\w))",
+    "tag": "<abbr title=\"indemnité de responsabilité correctionelle\">IRC</abbr>"
+  },
+  {
+    "accronym": "(?<!(\\w))SCC(?!(\\w))",
+    "tag": "<abbr title=\"Service correctionnel du Canada\">SCC</abbr>"
+  },
+  {
+    "accronym": "(?<!(\\w))SPAC(?!(\\w))",
+    "tag": "<abbr title=\"Service public et Approvisionnement Canada\">SPAC</abbr>"
   }
 ]

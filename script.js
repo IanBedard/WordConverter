@@ -81,8 +81,8 @@ output = output.replaceAll(regex,rgxReplaceArray[i])
 let IDs=[]
 
 output.match(/<h2>.+<\/h2>/g).forEach(element => {
-    let elementID = element.match(/(?!<h2>)(\w+)(?=<\/h2>)/g);
-    let negLook = element.match(/(?!<h2>)(\w|\d|\s)+<\/h2>/g)
+    let elementID = element.match(/(?!<h2>)([a-zA-ZÀÂÉÊÈËÌÏÎÔÙÛÇÆŒàâéêèëìïîôùûçæœ]+)(?=<\/h2>)/g);
+    let negLook = element.match(/(?!<h2>)([a-zA-ZÀÂÉÊÈËÌÏÎÔÙÛÇÆŒàâéêèëìïîôùûçæœ]|\d|\s)+<\/h2>/g)
     IDs.push(elementID)
     //console.log("element ID: " + elementID)
     //console.log("negative look: " + negLook)
