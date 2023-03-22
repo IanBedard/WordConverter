@@ -75,8 +75,10 @@ output = output.replaceAll(regex,rgxReplaceArray[i])
 
 
 });
+$("#h2button").click(function(){  
+function H2sRegex(){
 //*** Applying IDS to H2s */
-
+console.log("H2sRegex")
 //this will contain the id name after the first loop so it can apply the same id to On this Page
 let IDs=[]
 
@@ -84,8 +86,8 @@ output.match(/<h2>.+<\/h2>/g).forEach(element => {
     let elementID = element.match(/(?!<h2>)([a-zA-ZÀÂÉÊÈËÌÏÎÔÙÛÇÆŒàâéêèëìïîôùûçæœ]+)(?=<\/h2>)/g);
     let negLook = element.match(/(?!<h2>)([a-zA-ZÀÂÉÊÈËÌÏÎÔÙÛÇÆŒàâéêèëìïîôùûçæœ]|\d|\s)+<\/h2>/g)
     IDs.push(elementID)
-    //console.log("element ID: " + elementID)
-    //console.log("negative look: " + negLook)
+    console.log("element ID: " + elementID)
+    console.log("negative look: " + negLook)
     output = output.replace(element, '<h2 id="'+elementID[0]+'">'+negLook[0])
 });
 
@@ -104,16 +106,19 @@ allLI.forEach((element,i) => {
 
 }
 else{console.log(false)}
-
-
+}
+});
 
 
 //*** applying accronyms */
 $.each(json_data, function(i, e){
     let tag = JSON.stringify(e.tag);
     let accronym = RegExp(e.accronym, "g");
-    //console.log("acctronyms: " + RegExp(e.accronym, "g"))
-    //console.log("tags: " + tag)
+    console.log("acctronyms: " + RegExp(e.accronym, "g"))
+    tag = tag.slice(0, -1);
+    tag = tag.substring(1);
+   tag = tag.replaceAll("'",'"');
+    console.log("tags: " + tag)
     output = output.replaceAll(accronym,  tag)
   
   });

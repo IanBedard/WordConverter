@@ -26,6 +26,9 @@
   {
     "accronym": "(?<!(\\w))PSHCP(?!(\\w))",
     "tag": "<abbr title='Public Service Health Care Plan'>PSHCP</abbr>"
+  }, {
+    "accronym": "(?<!(\\w))PSHUP(?!(\\w))",
+    "tag": "<abbr title='Pay Sheet Hold Up Table'>PSHUP</abbr>"
   },
   {
     "accronym": "(?<!(\\w))PP\\+(?!(\\w))",
@@ -138,5 +141,14 @@
   {
     "accronym": "(?<!(\\w))SPAC(?!(\\w))",
     "tag": "<abbr title='Service public et Approvisionnement Canada'>SPAC</abbr>"
+  },
+  {
+    "accronym": "(?<!(\\w))CBA(?!(\\w))",
+    "tag": "<abbr title='collective bargaining agreement'>CBA</abbr>"
+  },
+  {
+    "accronym": "(?<!(\\w))FCD(?!(\\w))",
+    "tag": "<abbr title='First Change Date'>FCD</abbr>"
   }
+
 ]
