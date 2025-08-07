@@ -54,7 +54,7 @@ body {
 
 .nav-link.active {
     background: #000;
-    color: #fff !important;
+    color: #000 !important;
 }
 
 /* Container */
@@ -360,3 +360,4 @@ body {
     color: #991b1b;
     border: 1px solid #ef444433;
 }
+
